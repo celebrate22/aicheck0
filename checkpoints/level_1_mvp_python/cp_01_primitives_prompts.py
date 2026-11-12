@@ -32,17 +32,15 @@ def format_system_prompt(role: str, context: str, query: str) -> str:
 # Exercise 01.02: estimate_tokens
 def estimate_tokens(text: str) -> int:
     """Estimate token count using 1 token ~= 4 chars, rounded up. Return 0 for empty string."""
-    if not text:
+    if text == "":
         return 0
     return math.ceil(len(text) / 4)
     
-
-
 # Exercise 01.03: clean_generation
 def clean_generation(raw_output: str, stop_token: str = '<|endoftext|>') -> str:
     """Remove all occurrences of stop_token and truncate everything at/after '### END', then strip."""
     # TODO: Implement Exercise 01.03
-    raise NotImplementedError('Implement Exercise 01.03: clean_generation')
+    raise NotImplementedError('Implement Exercise 01.03: clean_generation').strip()
 
 
 # Exercise 01.04: calculate_call_cost
